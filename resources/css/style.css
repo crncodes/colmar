@@ -139,3 +139,44 @@ header {
 .line2 {
   padding-bottom: .5rem;
 }
+.learn {
+  margin: 0 auto;
+  display: inline-block;
+  padding: 2rem 4.5rem;
+
+}
+.learning {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.box {
+  border: thin solid black;
+  display: inline-flex;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  text-align: left;
+  width:30%;
+  height:35%;
+  overflow: hidden;
+}
+.describe {
+  height: 75%;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1.5rem;
+}
+.describe span {
+  display: block;
+  padding: .5rem 0;
+}
+.photo {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
