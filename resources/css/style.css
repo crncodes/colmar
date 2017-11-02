@@ -62,27 +62,7 @@ a:hover {
   padding-right: 1rem;
 }
 
-@media only screen and (max-width: 480px) {
 
-  header .campus, header .signin, header .comp, header .online, header .name {
-    display: none;
-  }
-
-  header .links {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  header img {
-    display: inline-block;
-
-  }
-}
-@media only screen and (min-width: 480px) {
-  .links img {
-    display: none;
-  }
-}
 
 .container {
   width: 85%;
@@ -146,32 +126,14 @@ a:hover {
 #button:hover {
   background-color: #666257;
 }
-@media only screen and (max-width: 960px) {
-  .banner {
-    display: block;
-    width: 100%;
-    z-index: 2;
-  }
-  .banner img {
-    width: 100%;
-    padding: 0;
-    height: auto;
-    display: block;
-  }
 
-  #bcontent {
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    max-width: 100%;
-  }
-}
 
 .infobox {
   display: flex;
   width: 100%;
 
 }
-.info {
+.info, .thesis {
   background-color: #b2a682;
   float: left;
   display: block;
@@ -181,7 +143,7 @@ a:hover {
   z-index: 2;
 }
 
-.info img, .info video {
+.info img, .thesis video {
   width: 100%;
   height: auto;
   display: block;
@@ -200,7 +162,7 @@ a:hover {
   line-height: 1.5rem;
 }
 
-.column {
+.icolumn, .tcolumn {
   float: left;
   background-color: #b2a682;
   width: 40%;
@@ -219,12 +181,13 @@ a:hover {
   align-items: center;
 }
 
-.orient img, .campus img, .lecture img, .fisma img, .now img {
+#pic1, .fisma img, .now img {
   max-width: 35%;
   height: auto;
   display: inline-block;
   padding: 1rem;
 }
+
 .text1, .text2, .text3 {
   display: inline-block;
   width: 65%;
@@ -241,11 +204,7 @@ a:hover {
   font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 960px) {
-  .sidebar img {
-    display: none;
-  }
-}
+
 
 .learn {
 
@@ -315,4 +274,204 @@ footer {
   display: flex;
   justify-content: flex-start;
   width: 100%;
+}
+
+@media only screen and (max-width: 479px) {
+
+  .container {
+    max-width: 480px;
+  }
+
+  header .camp, header .signin, header .comp, header .online, header .name {
+    display: none;
+  }
+
+  header .links {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  header img {
+    display: inline-block;
+
+  }
+  .infobox {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .infobox .icolumn, .infobox .thesis {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    float: none;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .icolumn .orient, .icolumn .campus, .icolumn .lecture {
+    border: none;
+    display: inline-block;
+    max-width:100%;
+    min-width: 100%;
+    height: auto;
+  }
+
+  #pic2 {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+
+  .icolumn .orient .text1, .icolumn .campus .text2, .icolumn .lecture .text3 {
+    display: block;
+    height: 85%;
+    width: auto;
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+  .learn .box img, #mobile, .infobox .tcolumn, .infobox .info,
+  .infobox .thesis .blurb, #pic1 {
+    display: none;
+  }
+  .learn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .learn .box {
+    display: block;
+    border-radius: 1rem;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: .5rem;
+  }
+  .thesis {
+    display: block;
+    width: 100%
+  }
+  .infobox .thesis {
+    background-color: #666257;
+  }
+  .infobox .thesis video {
+    width: 100%;
+    border: none;
+  }
+
+}
+@media only screen and (min-width: 480px) {
+  .links img {
+    display: none;
+  }
+}
+@media only screen and (min-width:960px) {
+  #pic2 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .banner {
+    display: block;
+    width: 100%;
+    z-index: 2;
+    border-radius: 1rem;
+  }
+  .banner img {
+    width: 100%;
+    padding: 0;
+    height: auto;
+    display: block;
+  }
+
+  #bcontent {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 960px) {
+  #pic1 {
+    display: none;
+  }
+
+  .infobox {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .infobox .icolumn, .infobox .thesis {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    float: none;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .icolumn .orient, .icolumn .campus, .icolumn .lecture {
+    border: none;
+    display: inline-block;
+    max-width:100%;
+    min-width: 100%;
+    height: auto;
+  }
+
+  #pic2 {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+
+  .icolumn .orient .text1, .icolumn .campus .text2, .icolumn .lecture .text3 {
+    display: block;
+    height: 85%;
+    width: auto;
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+
+  .learn .box img, #mobile, .infobox .tcolumn, .infobox .info,
+  .infobox .thesis .blurb, #pic1 {
+    display: none;
+  }
+  .learn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .learn .box {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+  .thesis {
+    display: block;
+    width: 100%
+  }
+  .infobox .thesis {
+    background-color: #666257;
+  }
+  .infobox .thesis video {
+    width: 100%;
+    border: none;
+  }
 }
