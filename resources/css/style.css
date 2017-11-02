@@ -1,6 +1,21 @@
+@font-face {
+  font-family: 'Fauna One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fauna One'), local('FaunaOne-Regular'), url(https://fonts.gstatic.com/s/faunaone/v5/cSd7NBXNFQWK4oX1706dY1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Petit Formal Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Petit Formal Script'), local('PetitFormalScript-Regular'), url(https://fonts.gstatic.com/s/petitformalscript/v5/OEZwr2-ovBsq2n3ACCKoEjUe2wjZSDd4ua_dT9VBiU4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 html {
   font-size: 16px;
-  line-height: .75rem;
+  font-family: 'Fauna One', serif;
+  line-height: 1.75rem;
   color: #242016;
 }
 body {
@@ -19,15 +34,24 @@ header {
   position: fixed;
   z-index: 10;
 }
-
+a {
+  text-decoration: none;
+  color:inherit;
+}
+a:hover {
+  color: #d3dbff;
+}
 .name {
   display: flex;
   width: 100%;
   font-size: 2rem;
+  font-family: 'Ruluko', sans-serif;
+  padding-left: 1rem;
 
 }
 
 .links {
+  font-family: 'Ruluko', sans-serif;
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -68,7 +92,7 @@ header {
 
 .title {
   color: #232738;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   padding-bottom: 1.5rem;
   padding-top: 1rem;
@@ -109,13 +133,20 @@ header {
 
 #button {
   background-color: #232738;
+  font-size: 2rem;
   color: white;
   width: 100%;
   padding: .5rem 0;
   text-align: center;
 }
 
-@media only screen and (max-width: 760px) {
+#button a:visited {
+  color: #d3dbff;
+}
+#button:hover {
+  background-color: #666257;
+}
+@media only screen and (max-width: 960px) {
   .banner {
     display: block;
     width: 100%;
@@ -166,6 +197,7 @@ header {
 
 .quote {
   padding-bottom: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .column {
@@ -186,6 +218,7 @@ header {
   display: flex;
   align-items: center;
 }
+
 .orient img, .campus img, .lecture img, .fisma img, .now img {
   max-width: 35%;
   height: auto;
@@ -199,6 +232,13 @@ header {
 }
 .text1 span, .text2 span, .text3 span {
   display: block;
+  line-height: 2rem;
+}
+
+.text1 span:first-child, .text2 span:first-child, .text3 span:first-child,
+.describe span:first-child {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 960px) {
@@ -213,7 +253,7 @@ header {
   flex-wrap: wrap;
   width: 75%;
   height: auto;
-  padding: 2rem 4.5rem;
+  padding: 1rem, 4.5rem, 2rem, 4.5rem;
   margin: 0 auto;
   justify-content: space-between;
   z-index: 2;
@@ -225,7 +265,7 @@ p {
   margin: 0 auto;
   padding-bottom: 2rem;
   padding-top: 2rem;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
 }
@@ -240,6 +280,9 @@ p {
   height:auto;
   overflow: hidden;
 }
+.box:hover {
+  background-color: white;
+}
 
 .box img {
   min-width: 100%;
@@ -252,6 +295,7 @@ p {
   padding-top: 1rem;
   padding-left: 1rem;
   padding-bottom: 1.5rem;
+  line-height: 1.5rem;
 }
 .describe span {
   display: block;
